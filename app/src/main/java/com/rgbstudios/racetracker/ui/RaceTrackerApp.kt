@@ -106,13 +106,6 @@ private fun RaceTrackerScreen(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            /*Icon(
-                painter = painterResource(R.drawable.ic_walk),
-                contentDescription = null,
-                modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
-            )
-
-             */
 
             Loader(isRunning = isRunning)
 
