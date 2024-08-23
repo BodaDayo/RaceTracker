@@ -24,7 +24,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,11 +44,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun RaceTrackerApp() {
-    /**
-     * Note: To survive the configuration changes such as screen rotation, [rememberSaveable] should
-     * be used with custom Saver object. But to keep the example simple, and keep focus on
-     * Coroutines that implementation detail is stripped out.
-     */
+
     val playerOne = remember {
         RaceParticipant(name = "Player 1", progressIncrement = 1)
     }
