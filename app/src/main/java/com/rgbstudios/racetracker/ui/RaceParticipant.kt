@@ -26,7 +26,7 @@ class RaceParticipant(
     suspend fun run() {
         while (currentProgress < maxProgress) {
             delay(progressDelayMillis)
-            currentProgress += progressIncrement
+            currentProgress = (currentProgress + progressIncrement).coerceAtMost(maxProgress)
         }
     }
 
